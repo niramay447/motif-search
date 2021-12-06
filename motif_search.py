@@ -1,0 +1,1 @@
+# motif search algorithm using minimum edit distance
