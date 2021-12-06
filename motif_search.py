@@ -1,9 +1,6 @@
-# motif search algorithm using minimum edit distance
+# motif search using minimum edit distance
 from string_gen import *
 from edit_dist import *
-
-
-
 matches = []
 
 def motifSearchUsingEditDist(substrings,num_of_substrings):
@@ -16,7 +13,7 @@ def motifSearchUsingEditDist(substrings,num_of_substrings):
                     same_row=True
                     continue
                 for l in range(num_of_substrings):
-                    dis = get_edit_distance(substrings[i][j],substrings[k][l])
+                    dis = min_edit_dist(substrings[i][j],substrings[k][l],1,1)
                     if dis<=5:
                         flag = True
                         break
